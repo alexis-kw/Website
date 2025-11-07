@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Alexis Wong - Project Lotus</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <!-- External Photon styles -->
+    <link rel="stylesheet" href="assets/css/General.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+      /* Hero Header with Blurred Background Image */
+      #header {
+        position: relative;
+        padding: 9em 0;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: var(--color-light-bg);
+      }
+
+      /* Background image layer - blurred */
+      #header::before {
+        content: '';
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        background-image: url('images/LotusHeader.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(8px);
+        z-index: 0;
+      }
+
+      /* Dark overlay for better text readability */
+      #header::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      /* Content on top of background */
+      #header .inner {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: var(--color-white);
+      }
+
+      /* Only style h1 in header, don't override other heading styles */
+      #header .inner h1 {
+        color: var(--color-white);
+        font-size: 3em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Responsive adjustments */
+      @media screen and (max-width: 736px) {
+        #header {
+          min-height: 50vh;
+          padding: 6em 2em;
+        }
+        
+        #header h1 {
+          font-size: 2em;
+        }
+      }
+
+	  .lotus-img {
+  		float: right;                  /* places image to the right of text */
+  		margin: 0 0 1em 2em;           /* adds space around image */
+  		width: 35%;                    /* responsive width */
+  		max-width: 400px;              /* cap the image size on large screens */
+  		border-radius: 10px;           /* rounded corners */
+  		object-fit: cover;             /* keeps image nicely cropped if scaled */
+		}
+
+	/* Clear floats for following sections */
+		.main::after {
+  		content: "";
+  		display: block;
+  		clear: both;
+		}
+
+	/* Responsive adjustments */
+		@media screen and (max-width: 900px) {
+  		.lotus-img {
+    		float: none;                 /* remove float on small screens */
+    		display: block;
+    		margin: 1.5em auto;          /* center the image */
+    		width: 80%;                  /* make it larger for phones */
+  		}
+	}
+
+  a.button.project-button {
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0.4em;
+    border: 2px solid #ff4d4d; 
+    border: 0;
+    box-shadow: inset 0 0 0 2px #ff4d4d; /* red outline */
+    color: #000000 !important; /* black text */
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 400;
+    height: 2.75em;
+    letter-spacing: 0.125em;
+    line-height: 2.75em;
+    padding: 0 2em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  /* Hover + active states */
+  a.button.project-button:hover {
+    background-color: #e2d9d9;
+  }
+
+  a.button.project-button:active {
+    background-color: #afa5a5;
+    color: #ffffff !important;
+  }
+
+  /* Optional centering within .actions.special (keeps layout consistent) */
+  ul.actions.special {
+    justify-content: center;
+    display: flex;
+  }
+    </style>
+  </head>
+
+  <body class="is-preload">
+    <!-- Header with Blurred Background -->
+    <section id="header">
+      <a href="Projects.html" class="button back-button">Back</a>
+      <div class="inner">
+        <h1><strong>Project Lotus</strong></h1>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main">
+  		<div class="inner">
+        <h2>Goal</h2>
+        <p>	What defines a city, makes it come alive? Once you leave a place, what do you remember most when the memories begin to blur together? 
+			For me, the first answer to come to mind is the people you meet. We are the essence and soul of a location. We breathe vibrant life into concrete arteries. 
+			<br></br>
+			I have a friend who finds it funny how strangers often cold approach me to start conversations, far more than what she considers usual. 
+			This was a quality of mine I’ve always disregarded; I didn’t think anything of it for years until she brought it up. Now I’m leaning into it to kickstart this project. 
+			<br></br>
+			The aim is to document Seattle through my most memorable interactions and fleeting moments with strangers. I’ve been fortunate enough to speak to people from all circumstances 
+			relatively often, which I hope brings enough diversity to my experiences to make for an interesting record. I believe these chance meetings not only shape how you see the world, but you as a person.
+			<br></br>
+			This project will be updated as I meet more people.
+		</p>
+
+        <h2>Why the name Lotus?</h2>
+        <p>	When I first planned my Japanese sleeve I planned the centerpiece to be a koi, but was quite indecisive on what to pair it with. I’ve spent many hours studying the motifs behind traditional Japanese tattooing 
+			and a favorite of mine is the lotus, so initially I wanted my sleeve to include one. My tattoo artist ended up picking the peony for me and I love how it turned out, but I do occasionally wonder
+			how it would’ve looked had I insisted on my original preference.  
+		</p>
+		<p>
+		<img src="images/LotusInText.PNG" alt="Lotus Project Image" class="lotus-img">
+          I’ve always found the lotus to be beautiful, with intriguing symbolism behind it. Most people can appreciate the visual of a flower sprouting from mud. As someone who was raised Buddhist 
+		  (albeit not practicing), I also enjoy the religious imagery; it’s a constant in Dharmic art, where it carries themes of divinity, grace, and prosperity. I saw them everywhere in temples 
+		  and on paintings growing up. I see them on vases, tapestries, calendars. I own a jade pendant of the bodhisattva Guan Yin, embodiment of compassion and mercy, the carving of which depicts her sitting on a lotus.
+			<br></br>
+		  Considering this, it’s easy to see how the lotus often rests at the back of my mind, along with the seeds of this project. In each of us I believe there lies a bit of divinity, 
+		  and this project tries to highlight those pieces I see in the people I meet. From the Wikipedia page on the
+		  <a href="https://en.wikipedia.org/wiki/Sacred_lotus_in_religious_art" target="_blank" rel="noopener noreferrer">lotus in religious imagery</a>
+		  , “The lotus is the symbol of what is divine or immortal in humanity, and also symbolizes divine perfection”. When I began this project it was immediately obvious to me what I should call it.
+        </p>
+
+		<p>
+			Finally, I’ve been listening to “Sortilège”, by Preservation and Gabe ‘Nandez a lot lately. Unreal production and sampling, thought-provoking rhymes. 
+			My favorite song off the album is the closing track, titled “Lotus Flower”. Not much relation to the project there, the song deals more with themes of reincarnation (another Dharmic constant). 
+			I just wanted to be a little self indulgent. 
+		</p>	
+
+		<p style = "text-align:center;">
+			Moments categorized by year.
+		</p>
+		<ul class="actions special">
+            <a href="Lotus2025.html" class="button project-button">2025</a>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+
+   <footer>
+	<p style="font-size: 10px; text-align:center;">
+	All images available for use under creative commons. 
+	</p>
+
+ </footer>
+</html>

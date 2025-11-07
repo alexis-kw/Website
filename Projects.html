@@ -1,38 +1,125 @@
 <!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Alexis Wong - Projects</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/Project.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-<body class="is-preload projects-page">
+  <head>
+    <title>Alexis Wong - Projects</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<!-- Header -->
-		<section id="header">
-			<a href="index.html" class="button back-button">Back</a>
-    		<div class="inner">
-        	<h1><strong>Projects</strong></h1>
+    <!-- External Photon styles -->
+    <link rel="stylesheet" href="assets/css/Project.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Inline custom layout styles -->
+    <style>
+      /* === Two-column project layout === */
+      .projects-columns {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 4rem;
+        margin-top: 2.5rem;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .projects-column {
+        flex: 1 1 400px;
+        max-width: 450px;
+        text-align: center;
+      }
+
+      .projects-column h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: var(--color-header-text);
+      }
+
+      .actions.special {
+        margin-top: 1.5rem;
+      }
+
+      /* Fix button text vertical alignment */
+      .projects-column .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-indent: 0;
+      }
+
+      /* Responsive stacking for tablets and below */
+      @media screen and (max-width: 768px) {
+        .projects-columns {
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+          max-width: 90%;
+        }
+      }
+
+      /* === Extra wide screen optimization (1440p and larger) === */
+      @media screen and (min-width: 1440px) {
+        .projects-columns {
+          max-width: 1600px;
+          gap: 8rem;
+        }
+
+        .projects-column h2 {
+          font-size: 2rem;
+        }
+
+        .projects-column .button {
+          font-size: 1.1rem;
+          padding: 0.9em 2.2em;
+        }
+
+        .inner h1 {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="is-preload projects-page">
+    <!-- Header -->
+    <section id="header">
+      <a href="index.html" class="button back-button">Back</a>
+      <div class="inner">
+        <h1><strong>Projects</strong></h1>
+
+        <!-- Two-column layout -->
+        <div class="projects-columns">
+
+          <!-- Engineering Column -->
+          <div class="projects-column">
+            <h2>Engineering</h2>
+            <ul class="actions special">
+              <li><a href="3DPrinter.html" class="button">3D-Printed Figurine</a></li>
+            </ul>
 			<ul class="actions special">
-  			<li><a href="3DPrinter.html" class="button">3D-Printed Mech</a></li>
-</ul>
-    	</div>
-	</section>
+              <li><a href="Compass.html" class="button">Compass</a></li>
+            </ul>
+          </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+          <!-- Non-Engineering Column -->
+          <div class="projects-column">
+            <h2>Non-Engineering</h2>
+            <ul class="actions special">
+              <li><a href="Lotus.html" class="button">Lotus</a></li>
+            </ul>
+          </div>
 
-	</body>
+        </div>
+      </div>
+    </section>
 
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
