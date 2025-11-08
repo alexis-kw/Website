@@ -5,12 +5,110 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-    <!-- External Photon styles -->
-    <link rel="stylesheet" href="assets/css/Project.css" />
+    <!-- External General styles -->
+    <link rel="stylesheet" href="assets/css/General.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
     <!-- Inline custom layout styles -->
     <style>
+      /* Hero Header Styling */
+      #header {
+        position: relative;
+        padding: 12em 0;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: var(--color-light-bg);
+      }
+
+      #header {
+        position: relative;
+        padding: 9em 0;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: var(--color-light-bg);
+      }
+
+      /* Background image layer - blurred */
+      #header::before {
+        content: '';
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        background-image: url('images/ProjectsHeader.PNG');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(8px);
+        z-index: 0;
+      }
+
+      /* Dark overlay for better text readability */
+      #header::after {
+        content: '';
+        position: absolute;
+        top: 0
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      /* Content on top of background */
+      #header .inner {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: var(--color-white);
+      }
+
+      /* Only style h1 in header, don't override other heading styles */
+      #header .inner h1 {
+        color: var(--color-white);
+        font-size: 3em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Responsive adjustments */
+      @media screen and (max-width: 736px) {
+        #header {
+          min-height: 50vh;
+          padding: 6em 2em;
+        }
+        
+        #header h1 {
+          font-size: 2em;
+        }
+      }
+
+      /* Back button styling for hero header */
+      .back-button {
+        position: fixed;
+        z-index: 999;
+      }
+
+      /* Override main section styling for this page */
+      #main {
+        max-width: 100%;
+        padding: 4em 2em;
+        text-align: center;
+        min-height: 60vh; /* Pushes footer down */
+      }
+
+      /* Push footer to bottom with extra spacing */
+      #footer {
+        margin-top: 6rem;
+      }
+
       /* === Two-column project layout === */
       .projects-columns {
         display: flex;
@@ -33,11 +131,12 @@
       .projects-column h2 {
         font-size: 1.75rem;
         margin-bottom: 1rem;
-        color: var(--color-header-text);
+        color: var(--color-primary);
       }
 
       .actions.special {
-        margin-top: 1.5rem;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
       }
 
       /* Fix button text vertical alignment */
@@ -46,6 +145,32 @@
         align-items: center;
         justify-content: center;
         text-indent: 0;
+        box-shadow: inset 0 0 0 1px var(--color-primary) !important;
+        color: var(--color-black) !important;
+      }
+
+      /* Back button styling */
+      .back-button {
+        box-shadow: inset 0 0 0 1px var(--color-primary) !important;
+        color: var(--color-black) !important;
+      }
+
+      /* Light gray hover effect for buttons */
+      .projects-column .button:hover {
+        background-color: rgba(110, 100, 100, 0.2) !important;
+      }
+
+      .projects-column .button:active {
+        background-color: rgba(110, 100, 100, 0.2) !important;
+      }
+
+      /* Also apply to back button */
+      .back-button:hover {
+        background-color: rgba(110, 100, 100, 0.2) !important;
+      }
+
+      .back-button:active {
+        background-color: rgba(110, 100, 100, 0.2) !important;
       }
 
       /* Responsive stacking for tablets and below */
@@ -74,7 +199,7 @@
           padding: 0.9em 2.2em;
         }
 
-        .inner h1 {
+        #header h1 {
           font-size: 3rem;
         }
       }
@@ -87,32 +212,39 @@
       <a href="index.html" class="button back-button">Back</a>
       <div class="inner">
         <h1><strong>Projects</strong></h1>
+      </div>
+    </section>
 
-        <!-- Two-column layout -->
-        <div class="projects-columns">
+    <!-- Main Body Content -->
+    <section id="main">
+      <div class="projects-columns">
+        <!-- Engineering Column -->
+        <div class="projects-column">
+          <h2>Engineering</h2>
+          <ul class="actions special">
+            <li><a href="3DPrinter.html" class="button">3D-Printed Figurine</a></li>
+          </ul>
+          <ul class="actions special">
+            <li><a href="Compass.html" class="button">Compass</a></li>
+          </ul>
+        </div>
 
-          <!-- Engineering Column -->
-          <div class="projects-column">
-            <h2>Engineering</h2>
-            <ul class="actions special">
-              <li><a href="3DPrinter.html" class="button">3D-Printed Figurine</a></li>
-            </ul>
-			<ul class="actions special">
-              <li><a href="Compass.html" class="button">Compass</a></li>
-            </ul>
-          </div>
-
-          <!-- Non-Engineering Column -->
-          <div class="projects-column">
-            <h2>Non-Engineering</h2>
-            <ul class="actions special">
-              <li><a href="Lotus.html" class="button">Lotus</a></li>
-            </ul>
-          </div>
-
+        <!-- Non-Engineering Column -->
+        <div class="projects-column">
+          <h2>Non-Engineering</h2>
+          <ul class="actions special">
+            <li><a href="Lotus.html" class="button">Lotus</a></li>
+          </ul>
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <br></br>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
