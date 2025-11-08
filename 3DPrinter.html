@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Alexis Wong - 3D-Printed Figurine</title>
@@ -12,303 +7,292 @@
 		<link rel="stylesheet" href="assets/css/General.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			            /* Hero Header with Blurred Background Image */
-      #header {
-        position: relative;
-        padding: 9em 0;
-        min-height: 60vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        background-color: var(--color-light-bg);
-      }
+			/* Hero Header with Blurred Background Image */
+			#header {
+				position: relative;
+				padding: 9em 0;
+				min-height: 60vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				background-color: var(--color-light-bg);
+			}
 
-      /* Background image layer - blurred */
-      #header::before {
-        content: '';
-        position: absolute;
-        top: -10%;
-        left: -10%;
-        width: 120%;
-        height: 120%;
-        background-image: url('images/UpsideDownPrintProgress-min.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        filter: blur(8px);
-        z-index: 0;
-      }
+			/* Background image layer - blurred */
+			#header::before {
+				content: '';
+				position: absolute;
+				top: -10%;
+				left: -10%;
+				width: 120%;
+				height: 120%;
+				background-image: url('images/UpsideDownPrintProgress-min.png');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				filter: blur(8px);
+				z-index: 0;
+			}
 
-      /* Dark overlay for better text readability */
-      #header::after {
-        content: '';
-        position: absolute;
-        top: 0
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.3);
-        z-index: 1;
-      }
+			/* Dark overlay for better text readability */
+			#header::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 255, 255, 0.3);
+				z-index: 1;
+			}
 
-      /* Content on top of background */
-      #header .inner {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-        color: var(--color-white);
-      }
+			/* Content on top of background */
+			#header .inner {
+				position: relative;
+				z-index: 2;
+				text-align: center;
+				color: var(--color-white);
+			}
 
-      /* Only style h1 in header, don't override other heading styles */
-      #header .inner h1 {
-        color: var(--color-white);
-        font-size: 3em;
-        margin: 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
+			/* Only style h1 in header, don't override other heading styles */
+			#header .inner h1 {
+				color: var(--color-white);
+				font-size: 3em;
+				margin: 0;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			}
 
-      /* Responsive adjustments */
-      @media screen and (max-width: 736px) {
-        #header {
-          min-height: 50vh;
-          padding: 6em 2em;
-        }
-        
-        #header h1 {
-          font-size: 2em;
-        }
-      }
+			/* Responsive adjustments */
+			@media screen and (max-width: 736px) {
+				#header {
+					min-height: 50vh;
+					padding: 6em 2em;
+				}
+				
+				#header h1 {
+					font-size: 2em;
+				}
+			}
 		</style>
 	</head>
-<body class="is-preload projects-page">
+	<body class="is-preload projects-page">
 
 		<!-- Header -->
 		<a href="Projects.html" class="button back-button">Back</a>		
 		<section id="header">
-			    <div class="inner">
-			<h1><strong>3D-Printed Figurine</strong></h1>
+			<div class="inner">
+				<h1><strong>3D-Printed Figurine</strong></h1>
+			</div>
+		</section>
 
-	</section>
+		<section id="main">
+			<div class="image-row">
+				<img src="images/FrontPainted-min.png" class="image-fade">
+				<img src="images/BackPainted-min.png" class="image-fade">
+				<img src="images/TopPainted-min.png" class="image-fade">
+			</div>
 
-	<div class = "image-row">
-		<img src="images/FrontPainted-min.png" class="image-fade">
-		<img src="images/BackPainted-min.png" class="image-fade">
-		<img src="images/TopPainted-min.png" class="image-fade">
-	</div>
-    	</div>
-<section id="main">
+			<div class="inner">
+				<div class="center-text">
+					<p>Above: Finished model. All parts modeled in Solidworks from scratch, printed, sanded, painted by me.</p>
+				</div>
 
-  <div class="inner">
+				<h2>The Start</h2>
+				<p>
+					Human-like robots is an oxymoron I've always been intrigued by. For me
+					gifted gundams and Transformers movies were an integral part of growing up.
+					I fell in love with their aesthetics,
+					how their computerized personalities shined through their appearance and actions. 
+					During COVID, I played a game called Titanfall 2.
+					The main story featured a mech you bond with named BT-7274. In addition, I recently 
+					completed a separate project where I built a bookshelf, and from the start I had a 
+					vague idea of furnishing the top of it with a model mech. After replaying Titanfall 2 
+					I decided on creating a model version of BT. 
+				</p>
 
-	<div class="center-text">
-  		<p>Finished model. All parts modeled in Solidworks from scratch, printed, sanded, painted by me.</p>
-	</div>
+				<h2>The Goals</h2>
+				<p>
+					- A model that stood ~12 in tall
+					<br></br>
+					- Functioning ball and socket joints in the shoulders and hips
+					<br></br>
+					- Accurate features/as much detail as possible, especially in the hands
+				</p>
+			</div>
 
-	<h2>The Start</h2>
-	<p>
-		Human-like robots is an oxymoron I've always been intrigued by. For me
-		gifted gundams and Transformers movies were an integral part of growing up.
-		 I fell in love with their aesthetics,
-		how their computerized personalities shined through their appearance and actions. 
-		During COVID, I played a game called Titanfall 2.
-		The main story featured a mech you bond with named BT-7274. In addition, I recently 
-		completed a separate project where I built a bookshelf, and from the start I had a 
-		vague idea of furnishing the top of it with a model mech. After replaying Titanfall 2 
-		I decided on creating a model version of BT. 
-	</p>
-	<h2>The Goals</h2>
-	<p>
-		- A model that stood ~12 in tall
-	<br></br>
-		- Functioning ball and socket joints in the shoulders and hips
-	<br></br>
-		- Accurate features/as much detail as possible, especially in the hands
-	</p>
-  </div>
-</section>
+			<div class="image-row">
+				<img src="images/HipSockets-min.png">
+				<img src="images/All-min.png">
+			</div>
 
-	<div class = "image-row">
-		<img src="images/HipSockets-min.png">
-		<img src="images/All-min.png">
-	</div>
+			<div class="inner">
+				<div class="center-text">
+					<p>Above: Initial ball and socket joint testing and general fragile parts testing.</p>
+				</div>
 
-<section id="main">
-  <div class="inner">
-	<div class="center-text">
-  		<p>Initial ball and socket joint testing, general fragile parts testing.</p>
-	</div>
+				<h2>Constraints</h2>
+				<p>
+					The most difficult part of getting started was setting an appropriate scale to reach 
+					the goal height of 12 in without a physical reference or drawings. The scale was determined 
+					through studying the in-game model thorougly. Once a scale was determined, 
+					everything was converted to mm for more accurate specifications, which is
+					useful when printing.
+					<br></br>
+					I set a soft time limit of 3 weeks to finish the project, meaning I would have to take 
+					print time into account when choosing which elements to test. The first hurdle was 
+					creating ball and socket joints for the shoulders and hips. I wasn't confident what 
+					the tolerance on my printer was, but a few tests confirmed ball and sockets
+					at my chosen scale were viable.
+					<br></br>
+					A soft goal was to keep the cost as low as possible. The only material purchased was a roll
+					of white PLA for the final product, totaling $20. The paints, prototype PLA, and sandpaper were all
+					borrowed from friends. 
+				</p>
+			</div>
 
-	<h2>Constraints</h2>
-	<p>
-		The most difficult part of getting started was setting an appropriate scale to reach 
-		the goal height of 12 in without a physical reference or drawings. The scale was determined 
-		through studying the in-game model thorougly. Once a scale was determined, 
-		everything was converted to mm for more accurate specifications, which is
-		useful when printing.
-	<br></br>
-		I set a soft time limit of 3 weeks to finish the project, meaning I would have to take 
-		print time into account when choosing which elements to test. The first hurdle was 
-		creating ball and socket joints for the shoulders and hips. I wasn't confident what 
-		the tolerance on my printer was, but a few tests confirmed ball and sockets
-		at my chosen scale were viable.
-	<br></br>
-		A soft goal was to keep the cost as low as possible. The only material purchased was a roll
-		of white PLA for the final product, totaling $20. The paints, prototype PLA, and sandpaper were all
-		borrowed from friends. 
-  </div>
-</section>
+			<div class="image-row">
+				<img src="images/CADFront.PNG">
+				<img src="images/CADBack.PNG">
+			</div>
 
-	<div class = "image-row">
-		<img src="images/CADFront.PNG">
-		<img src="images/CADBack.PNG">
-	</div>
+			<div class="image-row">
+				<img src="images/Left Arm Sliced.PNG">		
+			</div>
 
-	<div class = "image-row">
-		<img src="images/Left Arm Sliced.PNG">		
-	</div>
+			<div class="inner">
+				<div class="center-text">
+					<p>1, 2: Final Solidworks Assembly | 3: Left Arm Slice</p>
+				</div>
 
-  <section id="main">
-  <div class="inner">
-	<div class="center-text">
-  		<p>Final Solidworks Assembly, Left Arm Slice</p>
-	</div>
+				<h2>CAD</h2>
+				<p>
+					I had some experience cadding in the past, but nothing quite at this scale. I was used to recreating
+					objects from 2d drawings, not building up a model from scratch. Having no given dimensions was freeing
+					in a sense, but I had to be mindful at every step that my model was still to scale. Even without dimensions
+					best design practice was still generally followed with simple, fully defined sketches. I followed the design principle
+					of adding big, blocky parts first, then adding details last. I learned to reference the starting planes and the origin
+					whenever possible to keep the model from breaking if editing a part made far back in the design tree. 
+					<br></br>
+					The torso was created first, then the legs and arms, of which I only made one of each (then mirrored in assembly). 
+					I cut details that I felt were either too small or too fragile to belong on the physical model, such as wires
+					with many overhangs that ran through BT's entire body. Slicing itself was not difficult or time consuming. Tree supports were
+					added manually but required several tests to produce satisfactory results, hence the creation of prototypes.
+				</p>
+			</div>
 
-	<h2>CAD</h2>
-	<p>
-		I had some experience cadding in the past, but nothing quite at this scale. I was used to recreating
-		objects from 2d drawings, not building up a model from scratch. Having no given dimensions was freeing
-		in a sense, but I had to be mindful at every step that my model was still to scale. Even without dimensions
-		best design practice was still generally followed with simple, fully defined sketches. I followed the design principle
-		of adding big, blocky parts first, then adding details last. I learned to reference the starting planes and the origin
-		whenever possible to keep the model from breaking if editing a part made far back in the design tree. 
-	<br></br>
-		The torso was created first, then the legs and arms, of which I only made one of each (then mirrored in assembly). 
-		I cut details that I felt were either too small or too fragile to belong on the physical model, such as wires
-		with many overhangs that ran through BT's entire body. Slicing itself was not difficult or time consuming. Tree supports were
-		added manually but required several tests to produce satisfactory results, hence the creation of prototypes.
-	</p>
-  </div>
-</section>
+			<div class="image-row">
+				<img src="images/UpsideDownPrintProgress-min.png">
+				<img src="images/UpsideDownPrintFinished-min.png">
+				<img src="images/Standing-min.png">
+			</div>
 
-</section>
+			<div class="inner">
+				<div class="center-text">
+					<p>Prototype Prints in Various Stages</p>
+				</div>
 
-	<div class = "image-row">
-		<img src="images/UpsideDownPrintProgress-min.png">
-		<img src="images/UpsideDownPrintFinished-min.png">
-		<img src="images/Standing-min.png">
-	</div>
+				<h2>Prototypes and Sanding</h2>
+				<p>
+					The prototypes were mainly done to test print stability, quality, and center of mass (CoM). As mentioned earlier stability 
+					and quality were easily tested but required multiple runs to perfect. CoM only required a simple check with Solidworks' built in feature
+					before being tested with the prototype. The torso actually has a hollow section inside, which was used to adjust the
+					location of the CoM. Collision checks were also performed in Solidworks before printing. Thankfully I was observant enough throughout the cadding process that
+					there was no interference. 
+					<br></br>		
+					
+					The prototype used a black PLA which was gifted to me by a friend. It was harder than the white PLA
+					the final model would be printed with. For this reason I opted to skip extensive testing on the arms. 
+					The tree supports used to support the models while printing were much tougher to remove on the prototype 
+					than the final product, and I suspected the fragile fingers would be torn off when attempting to remove the supports.
+					<br></br>
+					At first I wanted to print the torso upside down to improve print stability as seen in the first image above, 
+					but this resulted in residual tree supports being clearly visible (notably at the top of the print). 
+					Sanding only did so much to smooth the surface, and so I opted to print 
+					the torso right-side up instead, to achieve a smoother finish on the visible areas. 
+					<br></br>
+					Supports were first carefully twisted off with wire cutters, then whittled off with a razor.
+					After removing supports I sanded the area with 80 grit sandpaper, gradually working my way up to
+					220. This resulted in a finish smooth to the touch, but still visually unven when seen up close. I deemed it acceptable 
+					as I had sliced the models in such a way that the sanded areas were out of sight when BT is posed normally.
+				</p>
+			</div>
 
-	<section id="main">
-  		<div class="inner">
-			<div class="center-text">
-  			<p>Prototype prints, in various stages</p>
-	</div>
+			<div class="image-row">
+				<img src="images/FrontUnpainted-min.png">
+				<img src="images/BackAngleUnpainted-min.png">
+				<img src="images/TopUnpainted-min.png">
+			</div>
 
-	<h2>Prototypes and Sanding</h2>
-	<p>
-		The prototypes were mainly done to test print stability, quality, and center of mass (CoM). As mentioned earlier stability 
-		and quality were easily tested but required multiple runs to perfect. CoM only required a simple check with Solidworks' built in feature
-		before being tested with the prototype. The torso actually has a hollow section inside, which was used to adjust the
-		location of the CoM. Collision checks were also performed in Solidworks before printing. Thankfully I was observant enough throughout the cadding process that
-		there was no interference. 
-	<br></br>		
-		
-		The prototype used a black PLA which was gifted to me by a friend. It was harder than the white PLA
-		the final model would be printed with. For this reason I opted to skip extensive testing on the arms. 
-		The tree supports used to support the models while printing were much tougher to remove on the prototype 
-		than the final product, and I suspected the fragile fingers would be torn off when attempting to remove the supports.
-	<br></br>
-		At first I wanted to print the torso upside down to improve print stability as seen in the first image above, 
-		but this resulted in residual tree supports being clearly visible (notably at the top of the print). 
-		Sanding only did so much to smooth the surface, and so I opted to print 
-		the torso right-side up instead, to achieve a smoother finish on the visible areas. 
-	<br></br>
-		Supports were first carefully twisted off with wire cutters, then whittled off with a razor.
-		After removing supports I sanded the area with 80 grit sandpaper, gradually working my way up to
-		220. This resulted in a finish smooth to the touch, but still visually unven when seen up close. I deemed it acceptable 
-		as I had sliced the models in such a way that the sanded areas were out of sight when BT is posed normally.
-	</p>
-  </div>
-</section>
+			<div class="inner">
+				<div class="center-text">
+					<p>Final Model, Unpainted</p>
+				</div>
 
-	<div class = "image-row">
-		<img src="images/FrontUnpainted-min.png">
-		<img src="images/BackAngleUnpainted-min.png">
-		<img src="images/TopUnpainted-min.png">
-	</div>
+				<h2>Final Model, Timeline</h2>
+				<p>
+					Thankfully the arms and fingers were less of a problem than anticipated, only requiring a day of testing and printing. I was able to assemble the final model in
+					an acceptable timeframe. Overall timeline: 
+					<br></br>
+					- Cadding ~2 1/2 weeks (~85 working hrs)
+					<br></br>
+					- Printing/testing ~1 1/2 weeks(~110 printing hrs, took place simultaneously w/ cadding) 
+					<br></br>
+					- Preparing/Sanding ~16hrs
+					<br></br>
+					- Painting ~16hrs
+					<br></br>
+					- Final model assembled ~3 weeks after beginning the project (goal met)
+					<br></br>
+					I am quite happy with how the details turned out, especially on the back and the many handles all over the body. I was uncertain on how
+					the small details would print as I had never attempted 3d printing something of this scale before, however I was pleasantly surprised. 
+					I was also unsure on how the paint would adhere to unsanded PLA (as only the supported areas were sanded), however it is quite consistent 
+					and appears saturated after just 1 or 2 coats. 
+				</p>
+			</div>
 
-	<section id="main">
-  		<div class="inner">
-			<div class="center-text">
-  			<p>Final model, unpainted</p>
-		</div>
+			<div class="image-row">
+				<img src="images/HandUnpainted-min.png">
+				<img src="images/PaintTest-min.png">
+			</div>
 
-	<h2>Final Model, Timeline</h2>
-	<p>
-		Thankfully the arms and fingers were less of a problem than anticipated, only requiring a day of testing and printing. I was able to assemble the final model in
-		an acceptable timeframe. Overall timeline: 
-	<br></br>
-		- Cadding ~2 1/2 weeks (~85 working hrs)
-	<br></br>
-		- Printing/testing ~1 1/2 weeks(~110 printing hrs, took place simultaneously w/ cadding) 
-	<br></br>
-		- Preparing/Sanding ~16hrs
-	<br></br>
-		- Painting ~16hrs
-	<br></br>
-		- Final model assembled ~3 weeks after beginning the project (goal met)
-	<br></br>
-		I am quite happy with how the details turned out, especially on the back and the many handles all over the body. I was uncertain on how
-		the small details would print as I had never attempted 3d printing something of this scale before, however I was pleasantly surprised. 
-		I was also unsure on how the paint would adhere to unsanded PLA (as only the supported areas were sanded), however it is quite consistent 
-		and appears saturated after just 1 or 2 coats. 
-	</p>
-  </div>
-</section>
+			<div class="inner">
+				<div class="center-text">
+					<p>1: Hand before painting | 2: test paint on leg</p>
+				</div>
 
-	<div class = "image-row">
-		<img src="images/HandUnpainted-min.png">
-		<img src="images/PaintTest-min.png">
-	</div>
-	<section id="main">
-  		<div class="inner">
-	<div class="center-text">
-  			<p>Hand before painting, test paint on leg</p>
-	</div>
-	
+				<h2>Possible Improvements, Compromises</h2>
+				<p>
+					Although I am overall quite happy with the result there are still many areas for improvement.
+					<br></br>		
+					The ball and sockets were viable, but still quite inconsistent. A solution would have been to scale the entire model up slightly,
+					however I did not wish to do so as it is already quite large on my shelf. I fixed loose sockets by adding a coat of clear nail polish,
+					and tight fits were sanded down. In addition, the lack of joints in the wrist/knees makes the overall model look slightly stiff on close inspection.
+					<br></br>
+					Ideally the entire model would have been sanded, however I didn't have high-grit sandpaper on hand. To fill the uneven sanded bits a filler
+					could've been used, however I would've had to paint over the filler for it to look acceptable, which was not in the scope of the painting portion
+					of the project.The original paintjob I had in mind would more closely resemble what BT looks like in the game. However my lack of experience 
+					in painting and my desire to showcase the model itself led to the decision of highlighting with paint, rather than painting 
+					every part (which would've looked something more like the 2nd test image). 
+					<br></br>
+					By the end of the project I had acquired a small box of failed prints. At about 1.5x3mm for each segment, the fingers were by far 
+					the most detailed and fragile part of the model. Although they printed properly as seen in the 1st photo above, I am unsure if 
+					they would be able to support holding objects if I wanted to add any in the future.	
+				</p>
+			</div>
+		</section>
 
-	<h2>Possible Improvements, Compromises</h2>
-	<p>
-		Although I am overall quite happy with the result there are still many areas for improvement.
-	<br></br>		
-		The ball and sockets were viable, but still quite inconsistent. A solution would have been to scale the entire model up slightly,
-		however I did not wish to do so as it is already quite large on my shelf. I fixed loose sockets by adding a coat of clear nail polish,
-		and tight fits were sanded down. In addition, the lack of joints in the wrist/knees makes the overall model look slightly stiff on close inspection.
-	<br></br>
-		Ideally the entire model would have been sanded, however I didn't have high-grit sandpaper on hand. To fill the uneven sanded bits a filler
-		could've been used, however I would've had to paint over the filler for it to look acceptable, which was not in the scope of the painting portion
-		of the project.The original paintjob I had in mind would more closely resemble what BT looks like in the game. However my lack of experience 
-		in painting and my desire to showcase the model itself led to the decision of highlighting with paint, rather than painting 
-		every part (which would've looked something more like the 2nd test image). 
-	<br></br>
-		By the end of the project I had acquired a small box of failed prints. At about 1.5x3mm for each segment, the fingers were by far 
-		the most detailed and fragile part of the model. Although they printed properly as seen in the 1st photo above, I am unsure if 
-		they would be able to support holding objects if I wanted to add any in the future.	
-	</p>
-  </div>
-</section>
+		<footer>
+			<br></br>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
- <footer>
-	<br></br>
- </footer>
 </html>

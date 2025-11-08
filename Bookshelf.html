@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Alexis Wong - Bookshelf</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <!-- External Photon styles -->
+    <link rel="stylesheet" href="assets/css/General.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+      /* Hero Header with Blurred Background Image */
+      #header {
+        position: relative;
+        padding: 9em 0;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: var(--color-light-bg);
+      }
+
+      /* Background image layer - blurred */
+      #header::before {
+        content: '';
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        background-image: url('images/Pre-Sanding.PNG');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(8px);
+        z-index: 0;
+      }
+
+      /* Dark overlay for better text readability */
+      #header::after {
+        content: '';
+        position: absolute;
+        top: 0
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      /* Content on top of background */
+      #header .inner {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: var(--color-white);
+      }
+
+      /* Only style h1 in header, don't override other heading styles */
+      #header .inner h1 {
+        color: var(--color-white);
+        font-size: 3em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Responsive adjustments */
+      @media screen and (max-width: 736px) {
+        #header {
+          min-height: 50vh;
+          padding: 6em 2em;
+        }
+        
+        #header h1 {
+          font-size: 2em;
+        }
+      }
+
+	  .lotus-img {
+  		float: right;                  /* places image to the right of text */
+  		margin: 0 0 1em 2em;           /* adds space around image */
+  		width: 35%;                    /* responsive width */
+  		max-width: 400px;              /* cap the image size on large screens */
+  		border-radius: 10px;           /* rounded corners */
+  		object-fit: cover;             /* keeps image nicely cropped if scaled */
+		}
+
+	/* Clear floats for following sections */
+		.main::after {
+  		content: "";
+  		display: block;
+  		clear: both;
+		}
+
+	/* Responsive adjustments */
+		@media screen and (max-width: 900px) {
+  		.lotus-img {
+    		float: none;                 /* remove float on small screens */
+    		display: block;
+    		margin: 1.5em auto;          /* center the image */
+    		width: 80%;                  /* make it larger for phones */
+  		}
+	}
+
+  a.button.project-button {
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0.4em;
+    border: 2px solid #ff4d4d; 
+    border: 0;
+    box-shadow: inset 0 0 0 2px #ff4d4d; /* red outline */
+    color: #000000 !important; /* black text */
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 400;
+    height: 2.75em;
+    letter-spacing: 0.125em;
+    line-height: 2.75em;
+    padding: 0 2em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  /* Hover + active states */
+  a.button.project-button:hover {
+    background-color: #e2d9d9;
+  }
+
+  a.button.project-button:active {
+    background-color: #afa5a5;
+    color: #ffffff !important;
+  }
+
+  /* Optional centering within .actions.special (keeps layout consistent) */
+  ul.actions.special {
+    justify-content: center;
+    display: flex;
+  }
+
+  /* target the H2s inside the main section */
+section.main .inner h2 {
+  font-size: 1.75rem; /* default (~28px) for most screens */
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+/* Large screens (e.g., 1440px) — make a bit smaller so it doesn't feel huge */
+@media (min-width: 1400px) {
+  section.main .inner h2 {
+    font-size: 1.6rem; /* ~25.6px on large monitors */
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  section.main .inner h2 {
+    font-size: 1.5rem; /* ~24px */
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  section.main .inner h2 {
+    font-size: 1.25rem; /* ~20px */
+  }
+}
+    </style>
+  </head>
+
+  <body class="is-preload">
+    <!-- Header with Blurred Background -->
+    <section id="header">
+      <a href="Projects.html" class="button back-button">Back</a>
+      <div class="inner">
+        <h1><strong>Bookshelf</strong></h1>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main">
+  		<div class="inner">
+                <div class = "image-row">
+                  <img src="images/CurrentShelf.PNG">
+	            </div>
+            <p style="text-align:center;">Bookshelf as of 11/7/2025</p>
+        <h2>Intro, Early August 2025
+        </h2>
+        <p>	I was an avid reader as a kid, but eventually drifted away from the hobby as I grew up. I recently got back into reading and decided to build a bookshelf instead of leaving my books strewn all over my room.
+          Despite being a fairly short project I'm very happy with how it turned out! It makes me happy every time I walk into my room. 
+          <br></br>
+          My grandpa helped me a lot with the process. He's the one who inspires me to take on projects such as this. Long before I studied pressure vessels, differential equations, stress-strain curves, I watched him
+          haphazardly fix and fly his model Boeing planes. He can build and fix nearly any physical object I can think of, despite never finishing school. 
+		</p>
+
+        <h2>Process</h2>
+        <p>	This project only took about two afternoons to complete; bookshelves are really just a few planks screwed together. I decided on 3/4 in birch plywood for the material, as I've always been partial to
+          a light and natural looking wood. I  measured my room dimensions and threw together a sketch. I then asked my friend to help transport the planks when I drove out to buy them (thank you H!).
+            <br></br>
+            	<div class = "image-row">
+		            <img src="images/Planning.PNG">
+		            <img src="images/Planks.PNG">
+                <img src="images/Sawing.PNG">
+	            </div>
+              <p style="text-align:center;"> 1: Quick Sketch of shelf | 2: Planks, fresh from the store | 3: Sawing Process</p>
+          The next day, my grandpa and I cut the planks to size, being sure to choose the sides with the best grain pattern. Simple process: measure with square, line with pencil, make the cut. 
+          On a whim I decided to go with a 20in base instead of the original 14.5 as I felt it looked a bit small when we were cutting. 
+            <br></br>
+          Once the planks were cut we brought them inside. The actual shelf locations were marked with pencil, then nail gunned to the bookshelf sides. Once all sides and shelves were nailed I countersinked and drilled in 
+          copper screws for an aesthetic finish. This was my biggest mistake of the whole project; although pretty looking, the copper screws stripped easily despite the pre-drilled holes. 
+          It was possible, but difficult to drill them in.
+		</p>
+		<p>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+
+   <footer>
+	<p>
+    <br></br>
+	</p>
+
+ </footer>
+</html>

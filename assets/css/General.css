@@ -566,6 +566,18 @@ input[type="radio"] + label:before {
 	gap: 2%;
 }
 
+/* Allow image-row to break out of constrained containers */
+.main .image-row, 
+#main .image-row {
+	max-width: none;
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
 .image-row img {
 	flex: 1 1 0;
 	max-width: calc(33% - 2%);
