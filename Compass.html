@@ -6,11 +6,53 @@
 -->
 <html>
 	<head>
-		<title>Alexis Wong - Compass</title>
+		<title>Alexis Wong - Digital Car Compass</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/General.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+      /* Hero Header with Blurred Background Image */
+      #header {
+        position: relative;
+        padding: 9em 0;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: var(--color-light-bg);
+      }
+
+      /* Background image layer - blurred */
+      #header::before {
+        content: '';
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        background-image: url('images/CompassHeader.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(8px);
+        z-index: 0;
+      }
+
+      /* Dark overlay for better text readability */
+      #header::after {
+        content: '';
+        position: absolute;
+        top: 0
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+	</style>
 	</head>
 <body class="is-preload projects-page">
 
@@ -18,7 +60,7 @@
 		<a href="Projects.html" class="button back-button">Back</a>		
 		<section id="header">
 			    <div class="inner">
-			<h1><strong>Compass (WIP)</strong></h1>
+		<h1><strong>Digital Car Compass (WIP)</strong></h1>
 
 	
 		</section>
@@ -27,34 +69,65 @@
 		<h2>Intro</h2>
 		<p>
 			One of my indulgences is going for night drives. I learned how to drive in my dad's car (and drove it for 2 years after that), which had a compass on the rearview mirror. 
-			I thought this was a fairly standard feature until I began driving my new car which doesn't have one. This was annoying and felt like a strange feature to not include. Why cheap out on a compass when a car is 
+			I thought this was a fairly standard feature until I got my new car which doesn't have one. This was annoying and felt like a strange feature to not include. Why cheap out on a compass when a car is 
 			already so expensive? I like using the compass to navigate when cruising aimlessly, especially if its dark out. So I decided to make my own. 
 		</p>
 
 		<h2>Initial Planning</h2>
 		<p>
 			Studying materials engineering gave me a solid foundation in circuits and electronics, but I've never dabbled beyond basic LED circuits until now. Generally I knew what I needed though; Arduino, LCD, magnetometer.
-			I already had basics like had old wires, resistors, and a breadboard. I got most of the stuff I still needed on the Eastside. I originally planned on using an Arduino Nano, but the store didn't have any in 
-			stock so I picked up an Uno instead. The LCD is a 16x2 w/ I2C, pretty standard. I also picked up some solder for later. Finally the magnetometer I ordered online from Adafruit, MMC56x3. 
+			I already had basics like had old wires, resistors, and a breadboard. I got most of the stuff I still needed on the Eastside at a physical location. I originally planned on using an Arduino Nano, but the store didn't have any in 
+			stock so I picked up an Uno instead. The LCD is a 16x2 w/ I2C, pretty standard. I also picked up some solder (leaded, w/ flux) for later. Finally the magnetometer I ordered online from Adafruit, MMC56x3. 
 			As for placement, I initially planned on mountinng it on my rearview mirror, however there were a few problems.
 			<br></br>
 			1. There isn't much clearance between the top of my car and the rearview mirror
 			<br></br>
-			2. The car isn't under my name so I don't want to excessively mod it. This meant I'd have to run a 12v line to my rearview, which could obstruct my view when driving and also meant I would need a 12v to 5v regulator
+			2. The car isn't under my name so I don't want to excessively mod it. This meant I'd have to run a 12v line to my rearview, which could obstruct my view when driving and also meant I would need a 12v to 5v regulator.
+				Using batteries is unacceptable to me as the compass would be in my car year-round and I was uncomfortable with leaving batteries in a hot summer car
 			<br></br>
-			Although I like the compass I typically only look at it maybe 2 or 3 times per drive. So to me it was acceptable to have it sitting under my Carplay screen instead of mounting it.
+			I typically only look at my compass maybe 2 or 3 times per drive. So to me it was acceptable to have it sitting under my Carplay screen instead of mounting it.
 		</p>
 
-		<h2>Testing, Soldering</h2>
+		<h2>First Round Testing, Soldering</h2>
 		<p>
+			First round testing includes making sure the Arduino, magnetometer, and LCD all function correctly. Second round testing will be done in my actual car.
+			<br></br>			
 			I've never coded in C++ before, but it's pretty similar to the languages I know so I picked it up quick. I wasn't trying to reinvent the wheel, so it helped that I could pull code from built-in libraries. 
 			The first thing I tested was the LCD. It took me about an hour to get it working, mostly due to a wiring issue (loose connection).
-
-			The magnetometer was much more difficult. I messed around with it for many hours before my friend who studies computer engineering told me I needed to solder pins to it first for a stable connection. I thought
-			it could just be wired down to a breadboard like usual, but I was wrong. It's part of the learning process though, so all good. 
+			<div class="image-row">
+				<img src="images/LCDTest.png">
+			</div>
+			<div class="inner">
+				<div class="center-text">
+					<p>LCD Test</p>
+				</div>
+			The magnetometer was much more difficult. I messed around with it for hours over about 2 weeks before my friend who studies computer engineering told me I needed to solder pins to it first for a stable connection. I thought
+			it could just be wired down to a breadboard like usual, but I was wrong. I had unfortunately picked up several more magnetometers than planned at this point for troubleshooting purposes. 
+			It's part of the learning process though, so all good. 
 			<br></br>
-			At this point in the process I had finalized my vision and ran a few more questions about soldering through the same friend (thanks!). 
-			This project was my first time soldering anything. I knew the theory, but no practice. When the time came I sourced my soldering iron from the UW Makerspace.  
+			At this point I had finalized my vision and ran a few more questions about soldering through the same friend (thanks!). I would need to solder pins to the magnetometers.
+			This project was my first time soldering anything. I knew the theory, but no practice. When the time came I sourced my soldering iron from the UW Makerspace. Luckily it was not difficult and
+			although my main magnetometer was the Adafruit I ended up soldering all the magnetometers I had, just in case. I ran a quick preliminary test when I was there to make sure I was reading magnetic
+			field values.
+			<div class="image-row">
+				<img src="images/Soldering.png">
+				<img src="images/SolderMag.png">
+				<img src="images/PostSolderTest.png">
+			</div>
+			<div class="inner">
+				<div class="center-text">
+					<p>1: Post Solder | 2: Solder Joints | 3: Post-Solder Test</p>
+				</div>
+			<br></br>
+			Later that night I finalized the first round of compass testing. I pulled the base compass code from the Adafruit library, which output a degree heading based off
+			magnetic field values in the marked x and y direction. I modified it to take the heading and output 1 of 8 directions, cardinal and those in between.
+			<div class="image-row">
+				<img src="images/1stTestComplete.png">
+			</div>
+			<div class="inner">
+				<div class="center-text">
+					<p>LCD Screen Displaying Compass Direction</p>
+				</div>
 		</p>
 
 		<h2>Mounting</h2>
