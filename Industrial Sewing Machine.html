@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Alexis Wong - Ind. Sewing Machine</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <!-- External Photon styles -->
+    <link rel="stylesheet" href="assets/css/General.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+      /* Hero Header with Blurred Background Image */
+      #header {
+        position: relative;
+        padding: 9em 0;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: var(--color-light-bg);
+      }
+
+      /* Background image layer - blurred */
+      #header::before {
+        content: '';
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        background-image: url('images/SewingHeader.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(8px);
+        z-index: 0;
+      }
+
+      /* Dark overlay for better text readability */
+      #header::after {
+        content: '';
+        position: absolute;
+        top: 0
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      /* Content on top of background */
+      #header .inner {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: var(--color-white);
+      }
+
+      /* Only style h1 in header, don't override other heading styles */
+      #header .inner h1 {
+        color: var(--color-white);
+        font-size: 3em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Responsive adjustments */
+      @media screen and (max-width: 736px) {
+        #header {
+          min-height: 50vh;
+          padding: 6em 2em;
+        }
+        
+        #header h1 {
+          font-size: 2em;
+        }
+      }
+
+	  .wrap-img {
+  		float: right;                  /* places image to the right of text */
+  		margin: 0 0 1em 2em;           /* adds space around image */
+  		width: 35%;                    /* responsive width */
+  		max-width: 400px;              /* cap the image size on large screens */
+  		border-radius: 10px;           /* rounded corners */
+  		object-fit: cover;             /* keeps image nicely cropped if scaled */
+		}
+
+	/* Clear floats for following sections */
+		.main::after {
+  		content: "";
+  		display: block;
+  		clear: both;
+		}
+
+	/* Responsive adjustments */
+		@media screen and (max-width: 900px) {
+  		.wrap-img {
+    		float: none;                 /* remove float on small screens */
+    		display: block;
+    		margin: 1.5em auto;          /* center the image */
+    		width: 80%;                  /* make it larger for phones */
+  		}
+	}
+
+  a.button.project-button {
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0.4em;
+    border: 2px solid #ff4d4d; 
+    border: 0;
+    box-shadow: inset 0 0 0 2px #ff4d4d; /* red outline */
+    color: #000000 !important; /* black text */
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 400;
+    height: 2.75em;
+    letter-spacing: 0.125em;
+    line-height: 2.75em;
+    padding: 0 2em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  /* Hover + active states */
+  a.button.project-button:hover {
+    background-color: #e2d9d9;
+  }
+
+  a.button.project-button:active {
+    background-color: #afa5a5;
+    color: #ffffff !important;
+  }
+
+  /* Optional centering within .actions.special (keeps layout consistent) */
+  ul.actions.special {
+    justify-content: center;
+    display: flex;
+  }
+    </style>
+  </head>
+
+  <body class="is-preload">
+    <!-- Header with Blurred Background -->
+    <section id="header">
+      <a href="Projects.html" class="button back-button">Back</a>
+      <div class="inner">
+        <h1><strong>Industrial Sewing Machine</strong></h1>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main">
+  		<div class="inner">
+        <h2>Intro</h2>
+        <p>	My grandma was the first to teach me how to be smart with my money; living frugally, saving and recycling whenever possible. She owned a Singer 491D which saw consistent use
+          up until she passed. I have an interest in textiles and fashion, and recently took a very basic sewing course which I enjoyed. As someone who has relatively short legs and struggles to find pants at the correct length,
+          I wanted to make a pair of jeans. (Jeans are the worst to find a correct fit for off the shelf)
+		  </p>
+
+        <h2>The Machine</h2>
+        <p>	
+          I actually wasn't aware it was an industrial model until I examined it. It's powered by a motor which is capable of 5krpm, and therefore also needs oil to operate smoothly.
+          It hasn't been used in at least 6 or 7 years, so I knew some maintenance would be necessary. However I didn't expect the oil pan to look like a horror movie. I don't think grandma's changed the oil once in 
+          its entire lifespan.
+		  </p>
+			<div class="image-row">
+				<img src="images/SewingOil.png">
+				<img src="images/SewingMachinePreClean.png">
+        <img src = "images/SewingMachinePostClean.png">
+			</div>
+			<div class="inner">
+				<div class="center-text">
+					<p>1: Sewing Oil | 2: Oil Pan Pre Clean | 3: Oil Pan Post Clean</p>
+				</div>
+      <p>	
+          Finding industrial sewing machine oil was a whole separate adventure. I looked into alternatives however I found reports that improper oil would gum up the gears.
+          I looked online briefly but was skeptical of the sources. Who still sells industrial sewing oil at a physical location in Seattle in 2025? Sewing machine use has been declining for decades.
+          People said Michael's still carried Singer branded sewing oil, however when I went the shelves were dusty. Finally I stopped by Quality Sewing in Northgate who referred me to C.H. Holderby's, a half-secret location
+          in the CD. The old, polite gentleman who runs the joint sold me a quart of generic sewing oil.
+		  </p>
+
+        <p>	
+          As I mentioned the machine desperately needed a deep cleaning. I gloved up and got to work. I couldn't even see the screw plug; I used a screwdriver to scrape gunk off the bottom before poking around with 
+          a finger to locate it before blindly unscrewing it. Once the oil drained I pulled out a bunch of solids that had fallen into the oil pan, including 2 bobbins, 2 zippers, a few needles, a bobby pin, and a bunch
+          of thread. I then took a bunch of paper towels soaked in IPA to the pan itself, cleaning off as much residue as I could, actually running out of IPA during this process. Once I was satisfied I refilled the oil and 
+          checked for leaks.
+		  </p>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+
+   <footer>
+
+ </footer>
+</html>
