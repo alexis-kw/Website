@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Alexis Wong - Digital Car Compass</title>
+		<title>Alexis Wong - Digital Compass</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/General.css" />
@@ -60,7 +60,7 @@
 		<a href="Projects.html" class="button back-button">Back</a>		
 		<section id="header">
 			    <div class="inner">
-		<h1><strong>Digital Car Compass (WIP)</strong></h1>
+		<h1><strong>Digital Compass</strong></h1>
 
 	
 		</section>
@@ -136,9 +136,6 @@
 			would need to be perfectly horizontal or vertical. I also reconsidered where to mount the compass in my car as I noted it was 
 			quite inaccurate if there was magnetic noise. To start I made a quick first prototype 
 			just to see how everything would look mounted onto the same plate with screws.
-			After a bit more consideration I decided to add an accelerometer to eliminate worries about magnetometer
-			orientation. However this would require a bit more soldering to add more pins to the board.
-		</p>		
 			<div class="image-row">
 				<img src="images/1stMountFront.png">
 				<img src="images/1stMountBack.png">
@@ -147,6 +144,20 @@
 				<div class="center-text">
 					<p>1: Prototype Mount Front | 2: Prototype Mount Back</p>
 				</div>
+		<h2>Conclusion, Improvements</h2>
+		<p>	
+			Unfortunately at this point I realized I hit a wall. Testing showed that although the compass worked, the readings were quite inconsistent and 
+			unreliable. There was just too much interference preventing quality readings of the Earth's magnetic field, which is relatively quite weak. The
+			situation did not improve in my car. Cars are full of objects that cause lots of magnetic fields, which just completely scrambled my readings.
+				<br></br>
+			This was completely my fault as I was overeager to begin the project and neglected the research aspect beforehand. I had a few ideas on how to fix the readings;
+			an accelerometer would mean I could mount the compass in any orientation which would reduce inconsistencies from accidentally tilting the magnetometer, and a GPS
+			module could be used in parallel with the magnetometer for very accurate readings when in motion; this is what modern car compasses do. Mounting the compass above 
+			my rearview would theoretically avoid most magnetic interference from the car. However I had already completely blown my budget at this point and admitted defeat.  
+				<br></br>
+			Although I didn't quite get the result I was hoping for, I still managed to make a working compass and picked up several new skills along the way which I'm quite proud of.
+			I've always wanted to learn how to solder and gaining that experience during this project was invaluable to me. Overall it was a very fun project which I don't regret taking on.
+		</p>	
 	</div>
 </section>
 
